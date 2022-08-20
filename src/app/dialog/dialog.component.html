@@ -1,0 +1,25 @@
+<h2 mat-dialog-title> Add Product Form</h2>
+<mat-dialog-content>
+    <form [formGroup] ="prodForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Product Name</label>
+          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Name" formControlName="prodName"
+          [ngClass]="{ 'is-invalid': valSubmit==true && prodForm.controls['prodName'].invalid }">
+          <div  *ngIf="valSubmit==true && prodForm.controls['prodName'].invalid" class="invalid-feedback">
+            Product name is required.....!
+          </div>
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Price</label>
+          <input type="password" class="form-control" placeholder="0.00" formControlName="price"
+          [ngClass]="{ 'is-invalid': valSubmit==true && prodForm.controls['price'].invalid }">
+          <div *ngIf="valSubmit==true && prodForm.controls['prodName'].invalid" class="invalid-feedback">
+            Price is required.....!
+          </div>
+        </div>
+        
+         
+        <button type="submit" class="btn add" (click)="addProduct()">Add Product</button>
+      </form>
+</mat-dialog-content>
