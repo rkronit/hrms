@@ -1,66 +1,46 @@
-<!---<p>my-order works!</p>-->
- <!-- Button trigger modal -->
- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Add to cart
-  </button>
-  <br>
-  <br>
-  <!-- Modal -->
-  <div class="modal" id="exampleModal"   >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Order Now</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <!-- <span aria-hidden="true">&times;</span> -->
-          </button>
-        </div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label for="Firstname">Firstname</label>
-                <input type="text"  class="form-control" placeholder="Enter Firstname" id="pwd" [(ngModel)]="firstname">
-              </div>
-            <div class="form-group">
-                <label for="Lastname">Lastname</label>
-                <input type="text"  class="form-control" placeholder="Enter Lastname" id="pwd" [(ngModel)]="lastname">
-             </div>  
-            <div class="form-group">
-                <label for="email">Email Id</label>
-                <input type="email"  class="form-control" placeholder="Enter Email Id" id="pwd" [(ngModel)]="email">
-              </div>
-            <div class="form-group">
-                <label for="Order">Order</label>
-                <input type="text"  class="form-control" placeholder="Enter Order" id="pwd" [(ngModel)]="order">
-              </div>  
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="buy()"*ngIf="showMe==false">Buy</button>
-          <button class="btn mt-3"(click)="update()" *ngIf="showMe==true">Update</button>
-        </div>
-      </div>
+
+<div class="container-fluid">
+    <div class="row">
+        
+        
+        <div class="col-lg-10 col-md-10 col-sm-12  search" >
+            <!-- <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                <input type="password" class="form-control" id="inputPassword2" placeholder="search your order here">
+                </div>
+                <button type="submit" class="btn btn1 mb-2">search</button>
+            </form> -->
+            <input type="text" class="form-control"  placeholder="search your order here " style="border-radius:15px ;">
+                </div>
+                <span class="center"><button type="submit" class="btn btn1 mb-2 "  >search</button></span>
+            </div>
+            <br><br>
     </div>
-  </div>
-  
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>Order Item</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of customer;let i=index">
-        <td>{{item.firstname}}</td>
-        <td>{{item.lastname}}</td>
-        <td>{{item.email}}</td>
-        <td>{{item.order}}</td>
-        <td><button type="button" class="btn btn-outline-success" (click)="edit(i)">Edit</button>&nbsp;&nbsp;
-            <button class="btn btn-outline-danger" (click)="delite(i)">Delete</button></td>
-      </tr>
-      
-    </tbody>
-  </table>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+        </div>
+    </div><br>
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+        </div>
+    </div>
+
