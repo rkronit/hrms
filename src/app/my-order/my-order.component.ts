@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-my-order',
   templateUrl: './my-order.component.html',
@@ -13,11 +14,56 @@ export class MyOrderComponent implements OnInit {
   customer:any=[];
   selectindex="";
   showMe=false;
+  searchText:string=""
   constructor() { }
 
   ngOnInit(): void {
   }
- 
+ products=[
+  {
+    imgsrc:"../../assets/formals.jpg",
+    price:"₹499",
+    description:"Casual Shoes for Men Black",
+    quantity:1,
+    status:"Your item has been Delevered"
+  },
+  {
+    imgsrc:"../../assets/img1.jpeg",
+    price:"₹199",
+    description:"Casual Shoes Polish Spray",
+    quantity:1,
+    status:"Your item has been Delevered"
+  },
+  {
+    imgsrc:"../../assets/formals2.jpg",
+    price:"₹729",
+    description:"Casual Shoes for Men Black",
+    quantity:2,
+    status:"Your item has been Delevered"
+  },
+  {
+    imgsrc:"../../assets/formalmoving.jpg",
+    price:"₹523",
+    description:"Casual Shoes for Men Black",
+    quantity:1,
+    status:"Your item has been Delevered"
+  },
+  {
+    imgsrc:"../../assets/causals.jpg",
+    price:"₹629",
+    description:"Casual Shoes for Men Black",
+    quantity:1,
+    status:"Your item has been Delevered"
+  },
+  {
+    imgsrc:"../../assets/formalsmoving.jpg",
+    price:"₹888",
+    description:"Casual Shoes for Men Black",
+    quantity:1,
+    status:"Your item has been Delevered"
+  }
+ ]
+
   buy(){
       let info={
         firstname:this.firstname,
