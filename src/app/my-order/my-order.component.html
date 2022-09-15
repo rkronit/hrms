@@ -10,112 +10,33 @@
                 </div>
                 <button type="submit" class="btn btn1 mb-2">search</button>
             </form> -->
-            <input type="text" class="form-control"  placeholder="search your order here " style="border-radius:15px ;">
+            <input type="text" class="form-control"  placeholder="search your order here " style="border-radius:15px ;" [(ngModel)]="searchText">
                 </div>
                 <span class="center"><button type="submit" class="btn btn1 mb-2 "  >search</button></span>
             </div>
             <br><br>
     </div>
     <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
+        <div class="col-lg-12" *ngFor="let item of products | filter : searchText; let i = index" >
+            <div class="card ordercard">
                 <div class="card-body">
                     <div class="row">
                   <div class="col-lg-2 ">
-                    <img src="../../assets/formals.jpg" alt="" style="width:45px ;">
+                    <img src={{item.imgsrc}} alt="" style="width:45px ;">
                   </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
+                  <div class="col-lg-4 ">{{item.description}} <div class="subtext">Quantity - {{item.quantity}}</div>
                 </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
+                   <div class="col-lg-2 ">{{item.price}}</div>
+                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">{{item.status}}</div></div>
                 </div>
             </div>
-              </div>
+              </div><br>
         </div>
-    </div><br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                  <div class="col-lg-2 ">
-                    <img src="../../assets/img1.jpeg" alt="" style="width:45px ;">
-                  </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
-                </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
-                </div>
-            </div>
-              </div>
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                  <div class="col-lg-2 ">
-                    <img src="../../assets/formals2.jpg" alt="" style="width:45px ;">
-                  </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
-                </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
-                </div>
-            </div>
-              </div>
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                  <div class="col-lg-2 ">
-                    <img src="../../assets/formalmoving.jpg" alt="" style="width:45px ;">
-                  </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
-                </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
-                </div>
-            </div>
-              </div>
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                  <div class="col-lg-2 ">
-                    <img src="../../assets/causals.jpg" alt="" style="width:45px ;">
-                  </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
-                </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
-                </div>
-            </div>
-              </div>
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                  <div class="col-lg-2 ">
-                    <img src="../../assets/formalsmoving.jpg" alt="" style="width:45px ;">
-                  </div>
-                  <div class="col-lg-4 ">Casual Shoes for Men Black <div class="subtext">Quantity:1</div>
-                </div>
-                                    <div class="col-lg-2 ">₹499</div>
-                  <div class="col-lg-4 "><span class="dot"></span> &nbsp; Delevered on Sept 05 <div class="subtext">Your item has been Delevered</div></div>
-                </div>
-            </div>
-              </div>
-        </div>
-    </div><br>
+    </div>
+   
+    
+   
+   
+   
+  
 

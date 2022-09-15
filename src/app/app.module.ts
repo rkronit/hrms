@@ -18,6 +18,7 @@ import { MyOrderComponent } from './my-order/my-order.component';
 import { HelpComponent } from './help/help.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -32,7 +33,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AccountDetailsComponent,
     MyOrderComponent,
     HelpComponent,
-    DashboardComponent
+    DashboardComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

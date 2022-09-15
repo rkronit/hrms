@@ -9,6 +9,7 @@
 }
 .subtext{
     font-size: smaller;
+    font-weight: bold;
 }
 .dot {
     height: 10px;
@@ -16,4 +17,7 @@
     background-color:green;
     border-radius: 50%;
     display: inline-block;
+  }
+  .ordercard{
+    border-radius: 25px;
   }
